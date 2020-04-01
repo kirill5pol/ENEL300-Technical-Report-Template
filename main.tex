@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\usepackage[nonatbib, final]{neurips_2019}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{subfig}         % two images side-by-side
+\usepackage{wrapfig, floatrow} % Multipart figures
+\usepackage[font=small]{caption}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{lipsum}
+\hypersetup{
+  colorlinks = true, %Colours links
+  urlcolor   = blue, %Colour for external hyperlinks
+  linkcolor  = blue, %Colour of internal links
+  citecolor  = black %Colour of citations
+}
+
+\newcommand{\figwithsidecaption}[2]{
+\begin{figure}[H]
+\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top}, capbesidewidth=0.7\textwidth}}]{figure}[\FBwidth]
+{\caption*{#1}}
+{\includegraphics[width=2cm]{#2}}
+\end{figure}
+\vspace{-.5cm}
+}
+
+\begin{document}
+
+\input{titlepage.tex}
+\input{body.tex}
+
+\bibliographystyle{unsrt}
+\bibliography{main} 
+
+\end{document}
